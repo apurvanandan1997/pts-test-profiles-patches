@@ -1,0 +1,12 @@
+--- mbw/mbw.c.orig	2020-06-28 16:24:46.987577126 +0530
++++ mbw/mbw.c	2020-06-28 16:27:55.576882695 +0530
+@@ -14,6 +14,9 @@
+ #include <string.h>
+ #include <unistd.h>
+ 
++/* Converting mempcpy(3) to memcpy(3) for compability with NetBSD */
++#define mempcpy(D, S, N) ((void *) ((char *) memcpy (D, S, N) + (N)))
++
+ /* how many runs to average by default */
+ #define DEFAULT_NR_LOOPS 10
+ 
