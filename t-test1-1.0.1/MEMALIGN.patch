@@ -1,0 +1,11 @@
+--- t-test1.c.orig	2017-01-13 19:43:40.000000000 +0530
++++ t-test1.c	2020-06-29 01:37:10.474313589 +0530
+@@ -280,7 +280,7 @@
+ 	{
+ 		/* memalign */
+ 		if (m->size > 0) free(m->ptr);
+-		m->ptr = memalign(sizeof(int) << r, size);
++		m->ptr = aligned_alloc(sizeof(int) << r, size);
+ 	}
+ 	else if (r < 20)
+ 	{
