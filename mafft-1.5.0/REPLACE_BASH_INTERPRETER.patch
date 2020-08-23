@@ -1,0 +1,8 @@
+--- mafft-1.5.0/mafft_/mafft.orig	2020-08-23 23:06:07.888688418 +0530
++++ mafft-1.5.0/mafft_/mafft	2020-08-23 23:03:54.338303949 +0530
+@@ -1,4 +1,4 @@
+-#! /bin/bash 
++#! /usr/pkg/bin/bash 
+ er=0;
+ myself=`dirname "$0"`/`basename "$0"`; export myself
+ version="v7.392 (2018/Mar/3)"; export version
